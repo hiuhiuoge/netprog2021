@@ -1,4 +1,5 @@
-USTH CS Network Programming
+Pham Anh Hieu
+Bi9-106
 =====================================
 
 Students are expected to:
