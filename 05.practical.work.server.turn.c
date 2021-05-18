@@ -36,9 +36,9 @@ int main (int argc, char *argv[])
         return -1
     }
 
-    FILE *f;
-    f=fopen("add.txt","r");
-    fscanf(f,"%s",buf);
-    write(sockfd,buf,200);
-    printf("the file was sent successfully");
+    valread = read( new_socket , buffer, 1024);
+    printf("%s\n",buffer );
+    send(new_socket , buffer , strlen(buffer) , 0 );
+    printf("Message sent\n");
+    return 0;
 }
