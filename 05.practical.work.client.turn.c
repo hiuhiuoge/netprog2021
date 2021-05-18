@@ -11,8 +11,6 @@ int main(int argc, char *argv)
     char *ipaddr;
     unsigned short port = 8784;
     struct sockaddr_in saddr, caddr;
-    int sockfd;
-    unsigned short port = 80;
 
 
     if ((sockfd=socket(AF_INET, SOCK_STREAM, 0)) < 0) {
