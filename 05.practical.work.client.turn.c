@@ -22,7 +22,7 @@ int main(int argc, char *argv)
 
         if(argc == 2) {
 	hostname = gethostbyname(argv[1]);
-	    }
+	}
         else {
             printf("%s\n", " Enter hostname: ");
             char str[50];
