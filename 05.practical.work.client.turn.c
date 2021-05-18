@@ -55,10 +55,9 @@ int main(int argc, char *argv)
     else {}
     return 0;
 
-    FILE *fp;
-    read(connfd,buffer,200);
-    fp=fopen("add1.txt","w");
-    fprintf(fp,"%s",buf);
-    printf("the file was received successfully");
-    printf("the new file created is add1.txt");
+    valread = read( new_socket , buffer, 1024);
+    printf("%s\n",buffer );
+    send(new_socket , hello , strlen(hello) , 0 );
+    printf("Hello message sent\n");
+    return 0;
 }
