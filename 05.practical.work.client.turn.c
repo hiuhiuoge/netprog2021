@@ -1,4 +1,3 @@
-05.practical.work.client.turn.c 
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -22,16 +21,16 @@ int main(int argc, char *argv)
     }
 
         if(argc == 2) {
-		hostname = gethostbyname(argv[1]);
+	hostname = gethostbyname(argv[1]);
 	    }
         else {
             printf("%s\n", " Enter hostname: ");
             char str[50];
             scanf("%s", str);
             hostname = gethostbyname(str);
-	    }
+	 }
 
-	    printf("IP address is: \n");
+	 printf("IP address is: \n");
     
     if (h=gethostbyname() == NULL) {
         printf("Unknown host. \n");
@@ -39,9 +38,9 @@ int main(int argc, char *argv)
     }
 
     else {
-	    for (unsigned int i=0; hostname->h_addr_list[i] != NULL; i++){
-		    printf("%s\n", inet_ntoa( *(struct in_addr*)(hostname->h_addr_list[i])));
-        }
+	for (unsigned int i=0; hostname->h_addr_list[i] != NULL; i++){
+	    printf("%s\n", inet_ntoa( *(struct in_addr*)(hostname->h_addr_list[i])));
+         }
     }
 
     memset(&saddr, 0, sizeof(saddr));
