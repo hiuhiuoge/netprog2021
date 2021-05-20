@@ -53,16 +53,16 @@ int main(int argc, char *argv)
     else {}
     return 0;
 
-<<<<<<< HEAD
+
     send(sock, buffer, strlen(buffer), 0);
     printf("Masage sent\n");
     valread = read(sock, buffer, 1024);
     printf("%s\n", buffer);
-=======
+
     valread = read( new_socket , buffer, 1024);
     printf("%s\n",buffer );
     send(new_socket , buffer , strlen(buffer) , 0 );
     printf("Message sent\n");
->>>>>>> de7a64a5a80309847d3cbea739493ce9616314af
+
     return 0;
 }
