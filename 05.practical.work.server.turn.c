@@ -36,16 +36,16 @@ int main (int argc, char *argv[])
         return -1
     }
 
-<<<<<<< HEAD
+
     valread = read(new_socket, buffer, 1024);
     printf("%s\n", buffer);
     send(new_socket, buffer, strlen(buffer), 0);
     printf("Message sent\n")
-=======
+
     valread = read( new_socket , buffer, 1024);
     printf("%s\n",buffer );
     send(new_socket , buffer , strlen(buffer) , 0 );
     printf("Message sent\n");
->>>>>>> de7a64a5a80309847d3cbea739493ce9616314af
+
     return 0;
 }
