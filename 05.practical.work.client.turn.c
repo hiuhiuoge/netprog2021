@@ -1,4 +1,3 @@
-05.practical.work.client.turn.c 
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -12,8 +11,6 @@ int main(int argc, char *argv)
     char *ipaddr;
     unsigned short port = 8784;
     struct sockaddr_in saddr, caddr;
-    int sockfd;
-    unsigned short port = 80;
 
 
     if ((sockfd=socket(AF_INET, SOCK_STREAM, 0)) < 0) {
@@ -22,16 +19,16 @@ int main(int argc, char *argv)
     }
 
         if(argc == 2) {
-		hostname = gethostbyname(argv[1]);
-	    }
+	hostname = gethostbyname(argv[1]);
+	}
         else {
             printf("%s\n", " Enter hostname: ");
             char str[50];
             scanf("%s", str);
             hostname = gethostbyname(str);
-	    }
+	 }
 
-	    printf("IP address is: \n");
+	 printf("IP address is: \n");
     
     if (h=gethostbyname() == NULL) {
         printf("Unknown host. \n");
@@ -39,9 +36,9 @@ int main(int argc, char *argv)
     }
 
     else {
-	    for (unsigned int i=0; hostname->h_addr_list[i] != NULL; i++){
-		    printf("%s\n", inet_ntoa( *(struct in_addr*)(hostname->h_addr_list[i])));
-        }
+	for (unsigned int i=0; hostname->h_addr_list[i] != NULL; i++){
+	    printf("%s\n", inet_ntoa( *(struct in_addr*)(hostname->h_addr_list[i])));
+         }
     }
 
     memset(&saddr, 0, sizeof(saddr));
@@ -56,9 +53,16 @@ int main(int argc, char *argv)
     else {}
     return 0;
 
+<<<<<<< HEAD
     send(sock, buffer, strlen(buffer), 0);
     printf("Masage sent\n");
     valread = read(sock, buffer, 1024);
     printf("%s\n", buffer);
+=======
+    valread = read( new_socket , buffer, 1024);
+    printf("%s\n",buffer );
+    send(new_socket , buffer , strlen(buffer) , 0 );
+    printf("Message sent\n");
+>>>>>>> de7a64a5a80309847d3cbea739493ce9616314af
     return 0;
 }
