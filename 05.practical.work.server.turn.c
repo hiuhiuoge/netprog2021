@@ -1,4 +1,3 @@
-05.practical.work.server.turn.c 
 #include <stdio.h>
 #include <sys/types.h> 
 #include <sys/socket.h>
@@ -42,10 +41,6 @@ int main (int argc, char *argv[])
     send(new_socket, buffer, strlen(buffer), 0);
     printf("Message sent\n")
 
-    valread = read( new_socket , buffer, 1024);
-    printf("%s\n",buffer );
-    send(new_socket , buffer , strlen(buffer) , 0 );
-    printf("Message sent\n");
 
     return 0;
 }
