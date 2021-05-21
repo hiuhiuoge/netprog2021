@@ -58,5 +58,6 @@ int main (int argc, char *argv[])
                 scanf("%s", buffer);
                 send(clientfd, buffer, strlen(buffer), 0);
             }
+    }
     return 0;
 }
